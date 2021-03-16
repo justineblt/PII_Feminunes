@@ -1,0 +1,763 @@
+.body
+{
+  background-color : #333333;
+  max-width : 100%;
+  height : 100%; 
+}
+
+
+
+.contientvideo{
+    display : block;
+	margin-right : auto;
+	margin-left : auto;	
+
+}
+
+#video1 {
+    display : block;
+	margin-right : auto;
+	margin-left : auto;	
+    }
+
+
+.conteneur1 /*conteneur, conteneur1, conteneur 2 c'est pas clair */
+{
+    background-color : white;
+    max-width : 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height : 80%; 
+    border-radius : 10px;
+	padding : 15px;
+  }
+
+.conteneur2
+{
+    background-color : #666660;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius : 10px;
+    padding : 15px;
+}
+
+a{
+color : inherit;
+}
+
+a:hover{
+text-decoration: none;
+color : inherit;
+}
+
+.navbar-brand
+{
+    border-bottom:none;
+	margin-left: 70%;
+	width: 30%; /* largeur obligatoire pour être centré */
+    display : flex;
+}
+
+
+
+.banniere
+{
+    display : flex;
+	width : 100%;
+	right : 0;
+	left : 0;
+	height : 10%;
+	position : absolute;
+    top : 0;
+}
+
+#boutonconnexion
+{   
+    background-color : #3C3DAB;
+    color : #87D9F4;
+    font-family : britannic bold;
+    border-radius : 5px;
+    margin-left : 40%;
+    width : 100%;
+}
+
+#boutonadministrateur
+{
+    background-color : #3C3DAB;
+    color : #87D9F4;
+    font-family : britannic bold;
+    border-radius : 5px;
+    margin-right: 30%;
+    margin-left:0%;
+    width : 100%;
+}
+
+#menuadmin
+{
+
+    margin-left:0%;
+
+}
+
+/* pour que le bouton soit à droite (il faut emmener tout le package dropdown) */
+.dropdown
+{
+    margin-left : 70%;
+}
+
+.tacosquiz
+{
+	display : block;
+	width : 40%;
+	margin-right : auto;
+	margin-left : auto;	
+}
+
+.dropdown-menu
+{
+    background-color: #a3a3a3;
+    margin-left : 41%;
+
+
+}
+
+.dropdown-item
+{
+    background-color: #a3a3a3;
+    font-family : britannic bold;
+    color : #333333;
+    padding : 5px;
+    text-align : center;
+}
+
+.dropdown-item:hover
+{
+    background-color: #FFFFFF;
+}
+
+.navbar .dropdown-toggle::after {
+    display: none;
+    }
+    
+/*personnalisation du pied de page */
+.footer
+{
+	background-color :  #666666;
+	height : 50%;
+	margin-left: auto;
+    margin-right: auto;
+	padding : 10px;
+	color : white;
+	text-align :center;
+}
+.gif
+{
+	Display : flex;
+	margin-left : auto;
+	margin-right : auto;
+	max-width : 10%;
+}
+
+#conteneur
+{
+	column-count : 3;
+    min-width : 100%;
+	display: flex;
+	justify-content : center;	
+}
+
+#conteneur > div
+{
+    flex:1;
+}
+
+.colonne1
+{
+    width : 50%;
+}
+
+.colonne2
+{
+    width : 50%;
+	text-align : center;
+}
+.colonne2bis
+{
+    width : 80%;
+    text-align : center;
+}
+
+.colonne3
+{
+	width : 50%;
+}
+
+.happytacos {
+    width: 15%;
+    display: block;
+    float: left;
+}
+
+.inscription
+{
+    text-align : left;
+}
+
+.tacoscreerquest
+{
+    width: 80%;
+    display : block;
+    margin-right: auto;
+    margin-left: auto;    
+}
+
+.texteinfos
+{
+    background-color: white;
+    border-radius : 8px;
+    text-align: left;
+    padding: 4px;
+    width: 15%;
+}
+.preinfos
+{
+    
+    border-radius : 8px;
+    text-align: right;
+    padding: 4px;
+    width: 15%;
+}
+.infos
+{
+    background-color: #E8E8E8;
+    border-radius : 10px;
+    padding: 1px;
+	
+}
+.moncompte
+{
+    text-align : left;
+ 
+   
+}
+
+.moutarde
+{
+	max-width : 12%;
+	display : block;
+	float : left;
+}
+
+.ketchup
+{
+	max-width : 12%;
+	display : block;
+	float : right;
+}
+
+h2
+{
+	font-family : britannic bold;
+	font-size : xx-large;
+}
+
+h1
+{
+    font-family : britannic bold;
+	font-size : xx-large;
+
+}
+
+
+p
+{
+	text-align:justify;
+}
+
+button
+{
+    text-decoration:none;
+    background-color : red;
+    color : white;
+    font-size: x-large;
+    outline:none;
+}
+
+/*Bouton ajout de question, faire apparaitre menu déroulant caché en desous */
+.boutonajout
+{
+    width : 5%;
+    height: 5%;
+    padding : 10px;
+    display: block ;
+	background-color : #ca2f1e;
+    color : #f5d5d3;
+    border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+    float : left;
+    font-family: britannic bold;
+	font-size : large; 
+}
+
+.boutonajout:hover 
+{
+    background-color : #3C3DAB;
+    color : #87D9F4;
+    font-family : britannic bold;
+    outline:none;
+    border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+}
+
+/* bouton + pour voir tous les thèmes */
+.boutontheme
+{
+    width : 5%;
+    height: 5%;
+    padding : 10px;
+    display: block ;
+	background-color : #ca2f1e;
+    color : #f5d5d3;
+    border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+    margin-left : auto;
+    margin-right : auto;
+    font-family: britannic bold;
+	font-size : large; 
+}
+
+.boutontheme:hover 
+{
+    background-color : #3C3DAB;
+    color : #87D9F4;
+    font-family : britannic bold;
+    outline:none;
+    border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+}
+
+.boutonjouer
+{
+    width : 20%;
+    padding : 10px;
+    display: block ;
+	background-color : #ca2f1e;
+    color : #f5d5d3;
+    border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+    margin-left : auto;
+	margin-right : auto;
+    font-family: britannic bold;
+	font-size : large;
+}
+
+.boutonjouer:hover {
+
+    background-color : #3C3DAB;
+    color : #87D9F4;
+    font-family : britannic bold;
+    outline:none;
+    border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+	
+}
+
+
+.boutonautre
+{
+    width : 50%;
+    padding : 10px;
+    display:block ;
+	background-color : #ca2f1e;
+    color : #f5d5d3;
+    border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+    margin-left : auto;
+    margin-right : auto;
+    font-family: britannic bold;
+	font-size : x-large;
+}
+
+.boutonautre:hover {
+
+    background-color : #3C3DAB;
+    color : #87D9F4;
+    font-family : britannic bold;
+    outline:none;
+   border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+}
+
+.button
+{
+    position: relative;
+    width : 15%;
+    text-align : center;
+    padding : 10px;
+    display:block ;
+	background-color : #3C3DAB;
+    color : #87D9F4;
+    border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+    margin-left : 70%;
+    font-family: britannic bold;
+	font-size : large;
+}
+
+.button:hover{
+    background-color : #ca2f1e;
+    color : #f5d5d3;
+    font-family : britannic bold;
+    outline:none;
+    border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+}
+
+
+.boutonautrebis
+{
+    width : 30%;
+    padding : 10px;
+    display:block ;
+	background-color : #3C3DAB;
+    color : #87D9F4;
+    border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+    margin-left : 70%;
+    font-family: britannic bold;
+	font-size : large;
+}
+.boutonautrebis:hover {
+
+    background-color : #ca2f1e;
+    color : #f5d5d3;
+    font-family : britannic bold;
+    outline:none;
+   border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+}
+
+.boutonquestionsuivante
+{
+    width : 15%;
+    text-align : center;
+    padding : 10px;
+    display:block ;
+	background-color : #3C3DAB;
+    color : #87D9F4;
+    border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+    margin-left : 70%;
+    font-family: britannic bold;
+	font-size : large;
+}
+.boutonquestionsuivante:hover {
+
+    background-color : #ca2f1e;
+    color : #f5d5d3;
+    font-family : britannic bold;
+    outline:none;
+   border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+}
+
+.boutongo
+{
+    width : 40%;
+    padding : 10px;
+    display:block ;
+	background-color : #3C3DAB;
+    color : #87D9F4;
+    border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+    margin-left : auto;
+    margin-right: auto;
+    font-family: britannic bold;
+	font-size : xx-large;
+}
+
+.boutongo:hover
+{
+    background-color : #ca2f1e;
+    color : #f5d5d3;
+    font-family : britannic bold;
+    outline:none;
+   border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;   
+}
+
+
+.bouton /* gérer la taille de tous les boutons, c'est le bazar là!!!!!! */
+{
+    width : 5%;
+    padding : 10px;
+    display:block ;
+    border-bottom-left-radius : 10px;
+    border-top-right-radius : 10px;
+    margin-left : auto;
+    margin-right : auto;
+    font-family: britannic bold;
+	font-size : large;
+}
+
+.bouton:hover
+{
+    background-color : #3C3DAB;
+    color : #87D9F4;
+    font-family : britannic bold;
+    outline:none;
+    border-bottom:none;
+
+
+}
+
+
+label {
+  width: 110px;
+  display: inline-block; 
+  vertical-align: top;
+  margin: 6px;
+}
+
+.listederoulante
+{
+  position: relative;
+  float : right;
+  max-width: 30%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+
+
+.row
+{
+   display : block;
+	width : 80%;
+	margin-right : auto;
+	margin-left : auto;	
+}
+
+
+.ligne
+ {
+   display : flex;
+   flex-flow : row;
+   flex-wrap: wrap;
+   justify-content : space-between;
+   align-items : center;
+   margin-bottom: 5%; /* Met de l'espace entre chaque ligne de thèmes */
+ }
+ 
+.iconequiz
+{
+   display : flex;
+   flex-flow : column;
+   justify-content: space-between;
+   background-color: #333333;
+   border-radius: 15px;
+   margin-bottom: 5%;
+}
+
+.titre
+{
+     background-color: #333333;
+     color : white;
+     font-family: britannic bold;
+     font-size : xx-large;
+     margin : 0;
+     padding :0 0 0 2%;
+     border-radius: 15px 15px 0 0;
+}
+
+.theme
+{
+    border-radius: 0 0 15px 15px;
+}
+
+.colonnes
+{
+	column-count : 4;
+	margin-left: auto;
+	margin-right: auto;
+	text-align : center;
+}
+.col1
+{
+	height : 200px;
+}
+.ajouter_question
+{
+    color :white;
+}
+.ajouter_question:hover
+{
+    color :#87D9F4;
+}
+
+.supprquest
+{
+    text-align: center;
+}
+
+.textsuppr
+{
+    width : 30%;
+    text-align: left;
+}
+.resultat
+{
+    font-family : britannic bold;
+    font-size: 140%;
+    text-align: center;
+    color: #ca2f1e;
+    background-color: white;
+    width : 40%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.finpartiecolonne
+{
+    padding: 5%;
+    display: flex;
+
+}
+
+.colf1
+{
+    width: 90%;
+    padding: 30px;
+}
+
+figure {
+    position: relative;
+    text-align: center;
+  
+  }
+  
+  figcaption {
+    
+    position : absolute ;
+    width: 100%;
+    top: -38%;
+    right : 6%;
+    font-family : britannic bold;
+    font-size: 100%;
+    color:white;
+  }
+ 
+ .quest
+ {
+    font-family : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+    font-size: 20%;
+    color: black;
+    width: 30%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+
+ }
+ .rep
+ {
+    font-family : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+    font-size: 100%;
+    color: black;
+    width: 30%;
+    margin-top: 1%;
+    right : 3%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 200%;
+
+ }
+ 
+ .bloctv
+ {
+     text-align: center;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ #quiz {
+    position: relative;
+    display:none;
+    animation : none;
+    padding : 24%;
+    color : black;
+}
+
+
+li{
+    list-style : none;
+    list-style-image : none;
+    list-style-position : outside;
+    list-style-type : none;
+    padding : 10px;
+}
+
+#affichagequestion
+{
+    font-family : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+    font-size: 100%;
+    color: black;
+    width: 30%;
+    margin-top: 1%;
+    right : 3%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 200%;
+
+}
+
+.aide
+{
+    text-align : left;
+    margin-left: 10px;
+}
+.messageimportant
+{
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #ca2f1e;
+    text-decoration-style: blink;
+    border-radius : 10px;
+    text-shadow: 1px 1px 1px lightgrey;
+    font-family : britannic bold;
+    width : 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 150%;
+    box-shadow: #a3a3a3;
+}
+
+.numquestion{
+    color : white;
+    padding : 10px;
+    font-size: xx-large;
+    font-family : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+
+}
+
+#question{
+    font-family : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
+    font-size: 120%;
+    color: black;
+    width: 80%;
+    margin-top: 0%;
+    right : 3%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 150%;
+
+
+}
+
+.h4titre
+{
+    text-decoration: underline;
+    text-align:center;
+}
