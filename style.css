@@ -102,6 +102,14 @@
     font-size: 120%;
 }
 
+.texteviolet
+{
+    font-family : "AsapCondensed";
+    text-align : center;
+    font-size: 140%;
+    color : #7f62b8;
+}
+
 .corpslongtexte
 {
     font-family : "AsapCondensed";
@@ -172,6 +180,8 @@
     color : black;
     font-size : 250%;
 }
+
+
 .couverturearticle
 {
     width : 75%;

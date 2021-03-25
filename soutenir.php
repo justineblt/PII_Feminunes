@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 ?>
@@ -6,12 +5,11 @@ session_start();
 <html>
 
 <head>    
-<?php $pagetitre="Mode Admin";
+<?php $pagetitre="Nous  soutenir";
   require_once 'head.php'; ?>
 </head>
 
 <body>
-
 
  <section class="body">   
 
@@ -23,47 +21,28 @@ session_start();
     <a href="soutenir.php"><button type="button" class="boutonmenu">  SOUTENIR  </button></a>
     <a href="contact.php"><button type="button" class="boutonmenu">  CONTACT  </button></a>
 
-
     <a href="https://www.instagram.com/femin.unes/" target="_blank"><img class="logors" src="img/logoinsta.png" alt="Fémin'Unes instagram"></a>
     <a href="https://www.facebook.com/femin.unes/" target="_blank"><img class="logors" src="img/logofb.png" alt="Fémin'Unes Facebook"></a>
     </section>
 
+<p class="titrepage">Nous soutenir</p>
 
-<div class="fondimage">
-  <div class="casenoire">  
-    <h1>Ajout d'un mot dans le lexique</h1>    <br/>
+<div class="caseblanche">  
+    
+    <p class="texteviolet">
+    Ajourd'hui, je me paye à manger ou des protections hygiéniques ?
+    </p>
+    <hr/>
 
-    <form action="ajouta.php" method="post">
-    <p class="corpstextearticle">
-
-      <label class ="barretexte" for="titre"> Titre : </label>
-        <input type="text" name="titre" class="form-control" size="30"> <br/><br/>
-        Thème :
-        <select name="theme"><option value="Temoignage">Témoignage</option> <option value="Histoire">Histoire</option> <option value="Sujetsedu">Sujet éducatif</option> <option value="Portrait">Portrait</option></select><br/><br/>
-       
-        <label class ="barretexte" for="theme"> Image de couverture : </label> 
-        <input type="file" id="imgcouv" name="imgcouv" accept="image/png, image/jpeg"><br/><br/>
-
-      <label class ="barretexte" for="contenu">  Contenu :  </label><br/>
-        <textarea id="contenu" name="contenu" class="form-control" rows="5" cols="122" style="resize:none"></textarea>
-      <br/>      <br/>
-
-      <input type="submit" value="Ajouter" class="boutonmenu"/>
-      </p>
-
-</form>
-  </div>	
-</div>
-<br/><br/>
-<br/><br/>
-
+  </div>
+<br/>
 </section>
 
 <section class="footer">
 <br/><br/>
 <a href="#" class="flechebas" alt="remonter!"><img src="img/hautpage.png"></a>
 <p class="corpstexte">bas de page !<br/>
-  <br/><a href="deconnexion.php"><u>Déconnexion</u></a>
+  <br/><a href="connexion.php"><u>Mode admin</u></a>
 </p>
 <br/>
 <br/>
