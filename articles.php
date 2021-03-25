@@ -11,7 +11,6 @@ session_start();
 
 <body>
 
- <section class="body">   
 
     <section class="bandeau">
     <a href="accueil.php"><img class="logo" src="img/logo.png" alt="Logo Fémin'Unes"></a>
@@ -24,6 +23,7 @@ session_start();
     <a href="https://www.instagram.com/femin.unes/" target="_blank"><img class="logors" src="img/logoinsta.png" alt="Fémin'Unes instagram"></a>
     <a href="https://www.facebook.com/femin.unes/" target="_blank"><img class="logors" src="img/logofb.png" alt="Fémin'Unes Facebook"></a>
     </section>
+    <section class="body">   
 
 <p class="titrepage">Articles</p>
 

@@ -10,9 +10,6 @@ session_start();
 </head>
 
 <body>
-
- <section class="body">   
-
     <section class="bandeau">
     <a href="accueil.php"><img class="logo" src="img/logo.png" alt="Logo Fémin'Unes"></a>
     <a href="articles.php"><button type="button" class="boutonmenu">  ARTICLES  </button></a>
@@ -25,14 +22,28 @@ session_start();
     <a href="https://www.facebook.com/femin.unes/" target="_blank"><img class="logors" src="img/logofb.png" alt="Fémin'Unes Facebook"></a>
     </section>
 
+    <section class="body">   
+
 <p class="titrepage">Nous soutenir</p>
 
 <div class="caseblanche">  
-    
-    <p class="texteviolet">
-    Ajourd'hui, je me paye à manger ou des protections hygiéniques ?
+    <p class="corpstextev">
+        Ajourd'hui, je me paye à manger ou des protections hygiéniques ?
     </p>
     <hr/>
+<p class="corpstexte">
+Ce dilemme est celui.. explication post précarité menstruelle</br>
+Chaque année, une étudiante dépense environ 530€ de plus qu’un étudiant dans les protections périodiques. </br>Cela correspond à plus de 23 000€ dans une vie en comptant les médicaments, les rendez-vous médicaux ou encore les sous-vêtements qu’il faut changer.</br>
+Or en France, plus d'un million de personnes ne seraient pas en mesure de se payer des protections périodiques, c’est ce qu’on appelle la précarité menstruelle. <br/>Ces dépenses liées aux menstruations devraient être prises en charge par l’État, et considérer les règles comme sales est irrespectueux envers ces personnes qui n’y ont pas accès.</br>
+<br/></p>
+<p class="corpstextegras">
+Personne n’a à choisir entre manger ou avoir des protections hygiéniques, c’est pourquoi des boîtes en libre-service sont à votre disposition à l’ENSC.
+</p><br/>
+<a href="https://lydia-app.com/collect/80479-action-boite-menstruelle/fr" target="_blank">
+<img class="btncagnotte" src="img/cagnottebtn.png"></a>
+<br/>
+<br/>
+<p class="titrearticle">Tu peux faire un don via notre cagnotte Lydia <br/>en cliquant sur ce bouton !</p>
 
   </div>
 <br/>

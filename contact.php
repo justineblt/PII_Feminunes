@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 ?>
@@ -6,11 +5,12 @@ session_start();
 <html>
 
 <head>    
-<?php $pagetitre="Mode Admin";
+<?php $pagetitre="Nous  contacter";
   require_once 'head.php'; ?>
 </head>
 
 <body>
+
 
     <section class="bandeau">
     <a href="accueil.php"><img class="logo" src="img/logo.png" alt="Logo Fémin'Unes"></a>
@@ -20,39 +20,38 @@ session_start();
     <a href="soutenir.php"><button type="button" class="boutonmenu">  SOUTENIR  </button></a>
     <a href="contact.php"><button type="button" class="boutonmenu">  CONTACT  </button></a>
 
-
     <a href="https://www.instagram.com/femin.unes/" target="_blank"><img class="logors" src="img/logoinsta.png" alt="Fémin'Unes instagram"></a>
     <a href="https://www.facebook.com/femin.unes/" target="_blank"><img class="logors" src="img/logofb.png" alt="Fémin'Unes Facebook"></a>
     </section>
 
     <section class="body">   
 
+<p class="titrepage">Nous contacter</p>
 
-<div class="fondimage">
-  <div class="casenoire">  
-    <h1>Bienvenue dans le mode administrateur</h1>    <br/>
-
-    <table>
+<div class="caseblanche">  
+   
+<p class="corpstexte">
+    Une suggestion, une question ou une envie de témoigner ? <hr/>
+</p>
+<br/>
+<table>
 <tr>
-    <td class="colonne1"><a href="adminajouta.php"><img class="btnarticle" src="img/ajoutart.png" alt="ajouter article"></a></td>
-    <td class="colonne2"><a href="adminajoutl.php"><img class="btnarticle" src="img/ajoutlex.png" alt="ajouter lexique"></a></a></td>
+    <td class="colonne1"><a href="https://www.instagram.com/femin.unes/"><img class="btnarticle" src="img/insta.png" alt="insta"></a></td>
+    <td class="colonne2bis"><a href="https://www.facebook.com/femin.unes/"><img class="btnarticle" src="img/fb.png" alt="fb"></a></td>
+    <td class="colonne3"><a href="mailto:feminunes@ensc.fr"><img class="btnarticle" src="img/mail.png" alt="mail"></a></td>
 </tr>
 </table>
-    
-    
 
-  </div>	
-</div>
-<br/><br/>
-<br/><br/>
 
+  </div>
+<br/>
 </section>
 
 <section class="footer">
 <br/><br/>
 <a href="#" class="flechebas" alt="remonter!"><img src="img/hautpage.png"></a>
 <p class="corpstexte">bas de page !<br/>
-  <br/><a href="deconnexion.php"><u>Déconnexion</u></a>
+  <br/><a href="connexion.php"><u>Mode admin</u></a>
 </p>
 <br/>
 <br/>
