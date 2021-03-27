@@ -3,7 +3,9 @@
 
 <head>    
 <?php $pagetitre="Articles : Histoire";
-  require_once 'head.php'; ?>
+  require_once 'head.php'; 
+  include ('tryandcatch.php');
+?>
 </head>
 
 <body>
@@ -24,23 +26,38 @@
 <p class="titrepage">Histoire</p>
 
 <div class="caseblanche">  
-    
+
+<?php
+//Requête pour afficher les données des articles histoire la BDD
+$requete = $bdd->prepare("SELECT * FROM article WHERE theme='Histoire' ORDER BY id");
+$execution = $requete->execute();
+$articles = $requete->fetchall();
+
+//fonction qui permet de tronquer le contenu des articles
+function tronquetexte($text, $length){
+  if(strlen($text) <= $length) return $text;
+  return trim(substr($text, 0, $length));
+}
+?>
+
+<?php 
+//On fait un foreach afin d'afficher tous les artciles du thème histoire
+foreach($articles as $article): ?>
+
 <table class="tblarticle">
-<tr>
-    <td class = "colonne1bis"><a href=rojava.php><img class="couverturearticle" src="img/1rojava.png" alt="rojava"></a>
-    <p class="titrearticle">Le Rojava</p>
-    <p class="corpstextearticle">Le Rojava est une région située au nord de la Syrie, à la frontière avec la Turquie. Elle fait ainsi partie du Kurdistan, une région géographique et culturelle peuplée majoritairement par les Kurdes...<a href=rojava.php>lire la suite</a></p>
+    <td class = "colonne1bis">
+      <a href= <?php echo $article['nompage']?>>
+    <?php echo '<img class="couverturearticle" src="img/' . $article["couverture"] . '">'; ?> </a>
+
+    <p class="titrearticle"><?php echo $article['titre'];?></p>
+
+    <p class="corpstextearticle">  <?php echo tronquetexte($article['contenu'], 200).'...'; ?>
+      <a href=<?php echo $article['nompage']?>>lire la suite</a></p>
     <hr/>
     </td>
-
-    <td class = "colonne1bis"><a href=25novembre.php><img class="couverturearticle" src="img/125nov.png" alt="25nov"></a>
-    <p class="titrearticle">25 novembre</p>
-    <p class="corpstextearticle">Ce mercredi nous étions le 25 novembre 2020. Nous célébrions la journée internationale pour l’élimination des violences patriarcales. Les violences patriarcales sont multiples...<a href=25novembre.php>lire la suite</a></p>
-    <hr/>
-    </td>
-</tr>
-
 </table>
+
+<?php endforeach; ?>
 
   </div>	
 <br/>

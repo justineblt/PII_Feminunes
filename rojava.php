@@ -3,7 +3,9 @@
 
 <head>    
 <?php $pagetitre="HIstoire : Le Rojava";
-  require_once 'head.php'; ?>
+  require_once 'head.php';
+  include ('tryandcatch.php');
+  ?>
 </head>
 
 <body>
@@ -21,33 +23,31 @@
 
     <section class="body">   
 
-<p class="titrepage">Histoire</p>
+    <?php
+//Requête pour afficher les données de l'article de la BDD
+$requete = $bdd->query("SELECT * FROM article WHERE ID=2");
+$article = $requete->fetch();
+
+//Requêtes pour naviguer d'articles en articles
+$id = $article['ID'];
+$requete2 = $bdd->query("SELECT nompage FROM article WHERE ID=$id+1");
+$articlesuivant = $requete2->fetch();
+$requete3 = $bdd->query("SELECT nompage FROM article WHERE ID=$id-1");
+$articleprecedent= $requete3->fetch();
+?>
+
+<p class="titrepage"><?php echo $article['theme'];?></p>
 
 <div class="caseblanche">  
 <table>
 <tr>
-    <td class="flecheg"> <a href="25novembre.php"> <img class="fleche" src="img/flechegch.png" alt="flèche"></a></td>
-    <td class="couv"><img class="entetearticle" src="img/1rojava.png" alt="rojava"></td>
-    <td class="fleched"><a href="25novembre.php"><img class="fleche" src="img/flechedrt.png" alt="flèche"></a></td>
+    <td class="flecheg"> <a href=<?php echo $articleprecedent['nompage']?>> <img class="fleche" src="img/flechegch.png" alt="flèche"></a></td>
+    <td class="couv"> <?php echo '<img class="entetearticle" src="img/' . $article["couverture"] . '">'; ?></td>
+    <td class="fleched"><a href=<?php echo $articlesuivant['nompage']?>><img class="fleche" src="img/flechedrt.png" alt="flèche"></a></td>
 </table>
 
-    <p class="titrearticle">Le Rojava</p><hr/>
-    <p class="corpslongtexte">Le Rojava est une région située au nord de la Syrie, à la frontière avec la Turquie. Elle fait ainsi partie du Kurdistan, une région géographique et culturelle peuplée majoritairement par les Kurdes.
-</br>Depuis 2013, le Rojava mobilise l’attention par sa volonté d’une transformation sociale inédite. Situé entre les dictatures régionales et les puissances impérialistes internationales, le Rojava expérimente un nouveau modèle autonome révolutionnaire, qui plus est confédéral, communal*, pluriculturel, laïque, écologique et féministe. Y est installée une démocratie horizontale, là où prévalent dans les alentours dictatures et autres théocraties. Le Rojava est aussi appelé Fédération démocratique du Nord Syrien. </p>
-<center> <img src="https://www.lesoir.be/sites/default/files/dpistyles_v2/ena_16_9_in_line/2019/10/15/node_253859/27169894/public/2019/10/15/B9721259846Z.1_20191015171623_000+GJREMRUKK.1-0.jpg?itok=KqkgcLx-1571228695"></center>
-
-<p class="corpslongtexte"></br><i>*fonctionnement par communes où les décisions sont prises localement. Ces communes sont unies en confédération, il en existe des mixtes et des communes de femmes. </i>
-</br></br><b>CONTEXTE : Une utopie parmi le chaos</b> </br>Combat contre l’EI (Etat islamique), USA qui se retire, Turquie qui attaque car contre l’idée d’une région autonome à sa frontière et pression sur l’Occident (car la Turquie possède sur son territoire 3.5 millions de réfugié.e.s syrien.ne.s.) Cohabitation et coexistence de plusieurs communautés : syriaques, kurdes et arabes de culte différent et représenté dans toutes les institutions du Rojava.
-
-L’Unité de protection du peuple (YPG) et l’Unité de protection de la femme (YPJ), issus du Parti de l’union démocratique (PYD), ont joué un rôle décisif dans la lutte contre Daesh en Syrie du Nord.
-
-</br><b>UN PROJET SOCIAL</b> <br/>
-L’inspirateur de ce projet social, c’est Abdullah Öcalan. Il est le cofondateur du Parti des travailleurs du Kurdistan (PKK) et est emprisonné à vie en Turquie où il subit la torture car considéré comme terroriste par le gouvernement d’Erdogan, les Etats-Unis et l’Union européenne. 
-
-Pour le PKK, le droit des peuples à l’autodétermination ne passe pas par la création d’un État-nation kurde, mais par une nation démocratique non-étatique, où les minorités, communautés religieuses et groupes peuvent s’organiser de manière autonome. La volonté d’abandonner la figure du “mâle dominant” passe par le refus de l’asservissement des femmes et l’esclavage, perpétué par l’usage de la force puis par le contrôle de l’économie. 
-
-</p>
-<center> <img src="https://www.ypgrojava.org/upload/partspics/1485154316-ypjhill.jpg" width="50%"></center>
+    <p class="titrearticle"><?php echo $article['titre'];?></p><hr/>
+    <p class="corpslongtexte">  <?php echo $article['contenu'];?></p>
 <br/><br/>
   </div>	
 <br/>

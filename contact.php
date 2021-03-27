@@ -36,8 +36,8 @@ session_start();
 <br/>
 <table>
 <tr>
-    <td class="colonne1"><a href="https://www.instagram.com/femin.unes/"><img class="btnarticle" src="img/insta.png" alt="insta"></a></td>
-    <td class="colonne2bis"><a href="https://www.facebook.com/femin.unes/"><img class="btnarticle" src="img/fb.png" alt="fb"></a></td>
+    <td class="colonne1"><a href="https://www.instagram.com/femin.unes/" target="_blank"><img class="btnarticle" src="img/insta.png" alt="insta"></a></td>
+    <td class="colonne2bis"><a href="https://www.facebook.com/femin.unes/" target="_blank"><img class="btnarticle" src="img/fb.png" alt="fb"></a></td>
     <td class="colonne3"><a href="mailto:feminunes@ensc.fr"><img class="btnarticle" src="img/mail.png" alt="mail"></a></td>
 </tr>
 </table>

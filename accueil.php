@@ -1,5 +1,6 @@
 <?php
 session_start();
+include ('tryandcatch.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,7 +19,7 @@ session_start();
     <a href="lexique.php"><button type="button" class="boutonmenu">  LEXIQUE  </button></a>
     <a href="soutenir.php"><button type="button" class="boutonmenu">  SOUTENIR  </button></a>
     <a href="contact.php"><button type="button" class="boutonmenu">  CONTACT  </button></a>
-
+    
     <a href="https://www.instagram.com/femin.unes/" target="_blank"><img class="logors" src="img/logoinsta.png" alt="Fémin'Unes instagram"></a>
     <a href="https://www.facebook.com/femin.unes/" target="_blank"><img class="logors" src="img/logofb.png" alt="Fémin'Unes Facebook"></a>
     </section>
@@ -36,11 +37,18 @@ session_start();
 </div>
 <br/><br/>
 
+<?php
+//Requête pour afficher aléatoirement une définition 
+//Nombre d'éléments à extraire aléatoirement
+$a = 1;  
+$requete = $bdd->query("SELECT * FROM lexique ORDER BY RAND() LIMIT $a");
+$lignedef = $requete ->fetch();
+?>
 
 <div class="caseblanche">  
     <h1>Définition du jour</h1>
     <p class="corpstexte">
-    Aro : "définition...."
+  <u><?php echo $lignedef['mot'];?></u><?php echo '  :  '.$lignedef['definition'];?>
     </p>
 
   </div>	
