@@ -1,16 +1,17 @@
 <?php
 session_start();
+include('tryandcatch.php');
+
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-  <?php $pagetitre = "Nous  contacter";
+  <?php $pagetitre = "Mode Admin";
   require_once 'head.php'; ?>
 </head>
 
 <body>
-
 
   <section class="bandeau">
     <a href="accueil.php"><img class="logo" src="img/logo.png" alt="Logo Fémin'Unes"></a>
@@ -20,39 +21,49 @@ session_start();
     <a href="soutenir.php"><button type="button" class="boutonmenu"> SOUTENIR </button></a>
     <a href="contact.php"><button type="button" class="boutonmenu"> CONTACT </button></a>
 
+
     <a href="https://www.instagram.com/femin.unes/" target="_blank"><img class="logors" src="img/logoinsta.png" alt="Fémin'Unes instagram"></a>
     <a href="https://www.facebook.com/femin.unes/" target="_blank"><img class="logors" src="img/logofb.png" alt="Fémin'Unes Facebook"></a>
   </section>
 
   <section class="body">
 
-    <p class="titrepage">Nous contacter</p>
+    <div class="fondimage">
+      <div class="casenoire">
+        <h1>Ajout d'une définition dans le lexique</h1> <br />
 
-    <div class="caseblanche">
+        <form action="adminBddLexique.php" method="POST">
 
-      <p class="corpstexte">
-        Une suggestion, une question ou une envie de témoigner ?
-        <hr />
-      </p>
-      <br />
-      <table>
-        <tr>
-          <td class="colonne1"><a href="https://www.instagram.com/femin.unes/" target="_blank"><img class="btnarticle" src="img/insta.png" alt="insta"></a></td>
-          <td class="colonne2bis"><a href="https://www.facebook.com/femin.unes/" target="_blank"><img class="btnarticle" src="img/fb.png" alt="fb"></a></td>
-          <td class="colonne3"><a href="mailto:feminunes@ensc.fr"><img class="btnarticle" src="img/mail.png" alt="mail"></a></td>
-        </tr>
-      </table>
+          <div class="col-5">
+            <p class="corpstextearticle">
+              <label class="barretexte" for="motdef"> Mot : </label>
+              <input type="text" name="motdef" class="form-control" required>
+            </p>
+          </div>
+          <div class="col-12">
+            <p class="corpstextearticle">
+              <label class="barretexte" for="def"> Définition : </label>
+              <textarea name="def" class="form-control" rows="1" style="resize:none" required></textarea>
+            </p>
+          </div>
+          <br />
+          <input type="submit" value="Ajouter" class="boutonmenu" />
+          </p>
 
+        </form>
 
+      </div>
     </div>
-    <br />
+    <br /><br />
+    <br /><br />
+
   </section>
 
   <section class="footer">
     <br /><br />
     <a href="#" class="flechebas" alt="remonter!"><img src="img/hautpage.png"></a>
     <p class="corpstexte">bas de page !<br />
-      <br /><a href="connexion.php"><u>Mode admin</u></a>
+      <br /><a href="deconnexion.php"><u>Déconnexion</u></a>
     </p>
     <br />
     <br />

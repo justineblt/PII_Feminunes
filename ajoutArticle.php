@@ -5,12 +5,13 @@ session_start();
 <html>
 
 <head>
-  <?php $pagetitre = "Mode Admin"; ?>
-  <?php require_once 'head.php'; ?>
-
+  <?php $pagetitre = "Mode Admin";
+  require_once 'head.php'; ?>
 </head>
 
 <body>
+
+
 
   <section class="bandeau">
     <a href="accueil.php"><img class="logo" src="img/logo.png" alt="Logo Fémin'Unes"></a>
@@ -27,17 +28,56 @@ session_start();
 
   <section class="body">
 
-
-    <div class="fondimage">A
+    <div class="fondimage">
       <div class="casenoire">
-        <h1>Bienvenue dans le mode administrateur</h1> <br />
+        <h1>Ajout d'un article</h1> <br />
 
-        <table>
-          <tr>
-            <td class="colonne1"><a href="ajoutArticle.php"><img class="btnarticle" src="img/ajoutart.png" alt="ajouter article"></a></td>
-            <td class="colonne2"><a href="ajoutLexique.php"><img class="btnarticle" src="img/ajoutlex.png" alt="ajouter lexique"></a></a></td>
-          </tr>
-        </table>
+        <form action="adminBddArticle.php" method="post">
+
+
+
+          <div class="col-5">
+            <p class="corpstextearticle">
+              <label class="barretexte" for="titre"> Titre : </label>
+              <input type="text" name="titre" class="form-control" size="30" required>
+            </p>
+          </div>
+          <div class="col-5">
+            <p class="corpstextearticle">
+              <label class="barretexte" for="nompage"> Nom de la page : </label>
+              <input type="text" name="nompage" class="form-control" size="30" placeholder="nomdelapage.php" required>
+            </p>
+          </div>
+
+          <div class="col-md-3">
+            <p class="corpstextearticle">
+              Thème :
+              <select name="theme" class="custom-select">
+                <option value="Temoignage">Témoignage</option>
+                <option value="Histoire">Histoire</option>
+                <option value="Sujetsedu">Sujet éducatif</option>
+                <option value="Portrait">Portrait</option>
+              </select>
+            </p>
+          </div>
+          <div class="col-md-3">
+            <p class="corpstextearticle">
+              <label class="barretexte" for="imgcouv"> Image de couverture : </label>
+              <input type="file" id="imgcouv" name="imgcouv" accept="image/png, image/jpeg" required>
+            </p>
+          </div>
+          <div class="col-12">
+            <p class="corpstextearticle">
+              <label class="barretexte" for="contenu"> Contenu : </label><br />
+              <textarea id="contenu" name="contenu" class="form-control" rows="7" style="resize:none" required></textarea>
+              <br />
+            </p>
+          </div>
+
+          <input type="submit" value="Ajouter" class="boutonmenu" />
+
+
+        </form>
 
 
 

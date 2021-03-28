@@ -19,7 +19,7 @@ if (!empty($_POST['login']) and !empty($_POST['mdp']))
 
         else 
         {
-            // msg_erreur('Erreur','Veuillez réessayer.');
+           
         $showmodalerror=true;
         
         }
