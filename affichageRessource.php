@@ -25,43 +25,44 @@
 
     <?php
     //Requête pour afficher les données de l'article de la BDD
-    $requete = $bdd->query("SELECT * FROM article WHERE ID=" . $_GET["id"]);
-    $article = $requete->fetch();
+
+    $requete = $bdd->query("SELECT * FROM ressource WHERE ID=".$_GET["id"]);
+    $ressource = $requete->fetch();
 
     //Requêtes pour naviguer d'articles en articles
-    $idsuiv = $_GET["id"] + 1;
-    $idprec = $_GET["id"] - 1;
+    $idsuiv=$_GET["id"]+1;
+    $idprec=$_GET["id"]-1;
 
-    $requete2 = $bdd->query("SELECT MAX(ID) FROM article");
+    $requete2 = $bdd->query("SELECT MAX(ID) FROM ressource");
     $maxid = $requete2->fetch();
 
-    $requete3 = $bdd->query("SELECT MIN(ID) FROM article");
+    $requete3 = $bdd->query("SELECT MIN(ID) FROM ressource");
     $minid = $requete3->fetch();
 
-    if ($idprec == 0) {
-      $idprec = $maxid['0'];
+    if ($idprec==0)
+    {
+        $idprec=$maxid['0'];
     }
 
-    if ($idsuiv == $maxid['0'] + 1) {
-      $idsuiv = $minid['0'];
+    if ($idsuiv==$maxid['0']+1)
+    {
+        $idsuiv=$minid['0'];
     }
     ?>
 
-    <p class="titrepage">Articles</p>
+    <p class="titrepage"><?php echo $ressource['categorie']; ?></p>
 
     <div class="caseblanche">
       <table>
         <tr>
-          <td class="flecheg"> <a <?php echo "href=affichageArticle.php?id=" . $idprec ?> /> <img class="fleche" src="img/flechegch.png" alt="flèche"></a></td>
-          <td class="couv"> <?php echo '<img class="entetearticle" src="img/' . $article["couverture"] . '">'; ?></td>
-          <td class="fleched"> <a <?php echo "href=affichageArticle.php?id=" . $idsuiv ?> /><img class="fleche" src="img/flechedrt.png" alt="flèche"></a></td>
+          <td class="flecheg"> <a <?php echo "href=affichageRessource.php?id=".$idprec?> /> <img class="fleche" src="img/flechegch.png" alt="flèche"></a></td>
+          <td class="couv"> <?php echo '<img class="entetearticle" src="img/' . $ressource["couverture"] . '">'; ?></td>
+          <td class="fleched"> <a <?php echo "href=affichageRessource.php?id=".$idsuiv?> /><img class="fleche" src="img/flechedrt.png" alt="flèche"></a></td>
       </table>
 
-      <p class="titrearticle"><?php echo $article['titre']; ?></p>
+      <p class="titrearticle"><?php echo $ressource['titre']; ?></p>
       <hr />
-
-      <p class="corpslongtexte"> <?php echo nl2br($article['contenu']); ?></p>
-
+      <p class="corpslongtexte"> <?php echo nl2br($ressource['contenu']); ?></p>
       <br /><br />
     </div>
     <br />

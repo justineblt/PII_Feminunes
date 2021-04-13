@@ -37,12 +37,12 @@ $Session = new Session();
 
         <form action="connexion.php" method="POST">
           <div class="form-row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-3 mx-auto">
               <p class="corpstexte"><label for="inputEmail4">Login :</label>
                 <input type="text" name="login" class="form-control" id="inputEmail4" placeholder="Login" required>
               </p>
             </div>
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-3 mx-auto">
               <p class="corpstexte"><label for="inputPassword4">Mot de passe : </label>
                 <input type="password" name="mdp" class="form-control" id="inputPassword4" placeholder="Mot de passe" required>
               </p>
@@ -50,8 +50,6 @@ $Session = new Session();
           </div>
 
           <p class="corpstextecenter">
-
-
             <button type="submit" class="boutonconnexion"> Connexion </button>
           </p>
 

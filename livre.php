@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <?php $pagetitre = "Histoire";
+  <?php $pagetitre = "Découvrir : Littérature";
   require_once 'head.php';
   include('tryandcatch.php');
   ?>
@@ -23,46 +23,44 @@
 
   <section class="body">
 
-    <?php
-    //Requête pour afficher les données de l'article de la BDD
-    $requete = $bdd->query("SELECT * FROM article WHERE ID=" . $_GET["id"]);
-    $article = $requete->fetch();
-
-    //Requêtes pour naviguer d'articles en articles
-    $idsuiv = $_GET["id"] + 1;
-    $idprec = $_GET["id"] - 1;
-
-    $requete2 = $bdd->query("SELECT MAX(ID) FROM article");
-    $maxid = $requete2->fetch();
-
-    $requete3 = $bdd->query("SELECT MIN(ID) FROM article");
-    $minid = $requete3->fetch();
-
-    if ($idprec == 0) {
-      $idprec = $maxid['0'];
-    }
-
-    if ($idsuiv == $maxid['0'] + 1) {
-      $idsuiv = $minid['0'];
-    }
-    ?>
-
-    <p class="titrepage">Articles</p>
+    <p class="titrepage">Littérature</p>
 
     <div class="caseblanche">
-      <table>
-        <tr>
-          <td class="flecheg"> <a <?php echo "href=affichageArticle.php?id=" . $idprec ?> /> <img class="fleche" src="img/flechegch.png" alt="flèche"></a></td>
-          <td class="couv"> <?php echo '<img class="entetearticle" src="img/' . $article["couverture"] . '">'; ?></td>
-          <td class="fleched"> <a <?php echo "href=affichageArticle.php?id=" . $idsuiv ?> /><img class="fleche" src="img/flechedrt.png" alt="flèche"></a></td>
-      </table>
 
-      <p class="titrearticle"><?php echo $article['titre']; ?></p>
-      <hr />
+      <?php
+      //Requête pour afficher les données des articles histoire la BDD
+      $requete = $bdd->prepare("SELECT * FROM ressource WHERE categorie='Livre' ORDER BY id");
+      $execution = $requete->execute();
+      $ressources = $requete->fetchall();
 
-      <p class="corpslongtexte"> <?php echo nl2br($article['contenu']); ?></p>
+      //Fonction qui permet de tronquer le contenu des articles
+      function tronquetexte($text, $length)
+      {
+        if (strlen($text) <= $length) return $text;
+        return trim(substr($text, 0, $length));
+      }
+      ?>
 
-      <br /><br />
+      <?php
+      //On fait un foreach afin d'afficher tous les articles du thème histoire
+      foreach ($ressources as $ressource) : ?>
+
+        <div class="flex-container">
+          <div class="flex-item">
+            <a <?php echo "href=affichageRessource.php?id=" . $ressource["ID"] ?> />
+            <?php echo '<img class="couverturearticle" src="img/' . $ressource["couverture"] . '">'; ?> </a>
+
+            <p class="titrearticle"><?php echo $ressource['titre']; ?></p>
+
+            <p class="corpstextearticle"> <?php echo tronquetexte($ressource['contenu'], 200) . '...'; ?>
+              <a <?php echo "href=affichageRessource.php?id=" . $ressource["ID"] ?> />lire la suite</a>
+            </p>
+            <hr /><br /><br />
+          </div>
+        </div>
+
+      <?php endforeach; ?>
+
     </div>
     <br />
   </section>

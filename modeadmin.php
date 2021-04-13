@@ -27,8 +27,7 @@ session_start();
 
   <section class="body">
 
-
-    <div class="fondimage">A
+    <div class="fondimage">
       <div class="casenoire">
         <h1>Bienvenue dans le mode administrateur</h1> <br />
 

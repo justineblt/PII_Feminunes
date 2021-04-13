@@ -31,7 +31,10 @@ include('tryandcatch.php');
         <h1>Bienvenue sur Fémin'Unes !</h1>
         <h2>Qui sommes-nous ?</h2>
         <p class="corpstexte">
-          test<br /> blabla<br /> blabla<br /> blabla<br /> blabla<br />
+        Nous sommes un collectif d’étudiant.e.s de l’ENSC à Bordeaux se rassemblant autour de la lutte en faveur du féminisme.<br/>
+        Nos objectifs sont multiples et parmi eux nous avons la volonté de sensibiliser, informer et vulgariser sur des thématiques diverses du féminisme, permettant une prise de conscience à large échelle.
+        <br/>Soyez prêt.e.s à voir défiler du contenu de tout genre : de l’information sur un sujet donné, du partage de ressources, des portraits, des témoignages, des réflexions…
+
         </p>
       </div>
     </div>
@@ -70,22 +73,22 @@ include('tryandcatch.php');
 
         <div class="carousel-item active">
           <div class="carousel-col">
-            <img src="img/1rojava.png" class="d-block" alt="rojava">
+          <a href="affichageArticle.php?id=1"/><img src="img/1rojava.png" class="d-block" alt="rojava"></a>
           </div>
           <div class="carousel-col">
-            <img src="img/1intersec.png" class="d-block" alt="intersectionnalité">
+          <a href="affichageArticle.php?id=4"/><img src="img/1intersec.png" class="d-block" alt="intersectionnalité"></a>
           </div>
           <div class="carousel-col">
-            <img src="img/1temoignage.png" class="d-block" alt="témoignage">
+          <a href="affichageArticle.php?id=3"/> <img src="img/1temoignage.png" class="d-block" alt="témoignage"></a>
           </div>
           <div class="carousel-col">
-            <img src="img/1angela.png" class="d-block" alt="angela davis">
+          <a href="affichageArticle.php?id=9"/><img src="img/1angela.png" class="d-block" alt="angela davis"></a>
           </div>
         </div>
 
         <div class="carousel-item">
           <div class="carousel-col">
-            <img src="img/1varda.png" class="d-block" alt="agnès varda">
+          <a href="affichageArticle.php?id=10"/> <img src="img/1varda.png" class="d-block" alt="agnès varda"></a>
           </div>
           <div class="carousel-col">
             <img src="img/1cultureviol.png" class="d-block" alt="culture du viol">
@@ -94,7 +97,7 @@ include('tryandcatch.php');
             <img src="img/1temoignage2.png" class="d-block" alt="témoignage">
           </div>
           <div class="carousel-col">
-            <img src="img/125nov.png" class="d-block" alt="25 novembre">
+          <a href="affichageArticle.php?id=2"/><img src="img/125nov.png" class="d-block" alt="25 novembre"></a>
           </div>
         </div>
 
