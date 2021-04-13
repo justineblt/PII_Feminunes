@@ -70,7 +70,7 @@ include('tryandcatch.php');
 
         <div class="carousel-item active">
           <div class="carousel-col">
-            <a href="Rojava.php"><img src="img/1rojava.png" class="d-block" alt="rojava"></a>
+            <img src="img/1rojava.png" class="d-block" alt="rojava">
           </div>
           <div class="carousel-col">
             <img src="img/1intersec.png" class="d-block" alt="intersectionnalité">
@@ -91,7 +91,7 @@ include('tryandcatch.php');
             <img src="img/1cultureviol.png" class="d-block" alt="culture du viol">
           </div>
           <div class="carousel-col">
-            <img src="img/1temoignage2.png" class="d-block" alt=témoignage">
+            <img src="img/1temoignage2.png" class="d-block" alt="témoignage">
           </div>
           <div class="carousel-col">
             <img src="img/125nov.png" class="d-block" alt="25 novembre">

@@ -42,12 +42,6 @@ session_start();
               <input type="text" name="titre" class="form-control" size="30" required>
             </p>
           </div>
-          <div class="col-5">
-            <p class="corpstextearticle">
-              <label class="barretexte" for="nompage"> Nom de la page : </label>
-              <input type="text" name="nompage" class="form-control" size="30" placeholder="nomdelapage.php" required>
-            </p>
-          </div>
 
           <div class="col-md-3">
             <p class="corpstextearticle">

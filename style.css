@@ -267,7 +267,6 @@
     height : 30%;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 .btncagnotte
@@ -277,6 +276,25 @@
 
 }
 
+.btnrecherche
+{
+    background-color : black;
+    color : white;
+    font-family : "AsapCondensed-Bold";
+    font-size: 100%;
+    border-radius : 5px;
+    width : 10%;
+}
+.btnrecherche:hover
+{
+    background-color : #7f62b8;
+    color : white;
+    font-family : "AsapCondensed-Bold";
+    font-size: 100%;
+    border-radius : 5px;
+    width : 10%;
+}
+
 #carouselExemple {
     width: 80%;
     margin: 0 auto;
@@ -284,6 +302,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 
 .carousel-item img {
     width: 100%;

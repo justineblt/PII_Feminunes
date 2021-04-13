@@ -42,18 +42,18 @@
       ?>
 
       <?php
-      //On fait un foreach afin d'afficher tous les artciles du thème histoire
+      //On fait un foreach afin d'afficher tous les articles du thème histoire
       foreach ($articles as $article) : ?>
 
         <div class="flex-container">
           <div class="flex-item">
-            <a href=<?php echo $article['nompage'] ?>>
+            <a <?php echo "href=affichageArticle.php?id=".$article["ID"]?> />
               <?php echo '<img class="couverturearticle" src="img/' . $article["couverture"] . '">'; ?> </a>
 
             <p class="titrearticle"><?php echo $article['titre']; ?></p>
 
             <p class="corpstextearticle"> <?php echo tronquetexte($article['contenu'], 200) . '...'; ?>
-              <a href=<?php echo $article['nompage'] ?>>lire la suite</a>
+              <a <?php echo "href=affichageArticle.php?id=".$article["ID"]?> />lire la suite</a>
             </p>
             <hr /><br /><br />
           </div>

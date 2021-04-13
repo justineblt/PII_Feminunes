@@ -1,14 +1,16 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
-  <?php $pagetitre = 'Histoire';
-  require_once 'head.php';
-  include('tryandcatch.php');
-  ?>
+  <?php $pagetitre = "Découvrir";
+  require_once 'head.php'; ?>
 </head>
 
 <body>
+
 
   <section class="bandeau">
     <a href="accueil.php"><img class="logo" src="img/logo.png" alt="Logo Fémin'Unes"></a>
@@ -21,36 +23,30 @@
     <a href="https://www.instagram.com/femin.unes/" target="_blank"><img class="logors" src="img/logoinsta.png" alt="Fémin'Unes instagram"></a>
     <a href="https://www.facebook.com/femin.unes/" target="_blank"><img class="logors" src="img/logofb.png" alt="Fémin'Unes Facebook"></a>
   </section>
-
   <section class="body">
 
-    <?php
-    //Requête pour afficher les données de l'article de la BDD
-    $requete = $bdd->query("SELECT * FROM article WHERE ID=3");
-    $article = $requete->fetch();
-
-    //Requêtes pour naviguer d'articles en articles
-    $id = $article['ID'];
-    $requete2 = $bdd->query("SELECT nompage FROM article WHERE ID=$id+1");
-    $articlesuivant = $requete2->fetch();
-    $requete3 = $bdd->query("SELECT nompage FROM article WHERE ID=$id-1");
-    $articleprecedent = $requete3->fetch();
-    ?>
-
-    <p class="titrepage"><?php echo $article['theme']; ?></p>
+    <p class="titrepage">Découvrir</p>
 
     <div class="caseblanche">
+
+      <p class="corpstextecenter">
+        découvre nos catégories de ressources féministes...<br />
+      </p>
+
       <table>
         <tr>
-          <td class="flecheg"> <a href=<?php echo $articleprecedent['nompage'] ?>> <img class="fleche" src="img/flechegch.png" alt="flèche"></a></td>
-          <td class="couv"> <?php echo '<img class="entetearticle" src="img/' . $article["couverture"] . '">'; ?></td>
-          <td class="fleched"><a href=<?php echo $articlesuivant['nompage'] ?>><img class="fleche" src="img/flechedrt.png" alt="flèche"></a></td>
+          <td class="colonne1"><a href=livre.php><img class="btnarticle" src="img/livre.png" alt="livre"></a></td>
+          <td class="colonne2"><a href=podcast.php><img class="btnarticle" src="img/podcast.png" alt="podcast"></a></td>
+        </tr>
+        </table>
+        <table>
+        <tr>
+          <td class="colonne1"><a href=filmdocu.php><img class="btnarticle" src="img/filmdocu.png" alt="film et documentaire"></a></td>
+          <td class="colonne2bis"><a href=musique.php><img class="btnarticle" src="img/musique.png" alt="musique"></a></td>
+          <td class="colonne3"><a href=artgraphique.php><img class="btnarticle" src="img/artg.png" alt="art graphique"></a></td>
+        </tr>
       </table>
 
-      <p class="titrearticle"><?php echo $article['titre']; ?></p>
-      <hr />
-      <p class="corpslongtexte"> <?php echo $article['contenu']; ?></p>
-      <br /><br />
     </div>
     <br />
   </section>
@@ -73,4 +69,4 @@
 
 </body>
 
-</html>
+</html>de

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <?php $pagetitre = "Articles : Histoire";
+    <?php $pagetitre = "Lexique";
     require_once 'head.php';
     include('tryandcatch.php');
     ?>
@@ -23,15 +23,58 @@
 
     <section class="body">
 
+        <?php //Requête pour récupérer le lexique de la BDD
+        $lexique = $bdd->query('SELECT * from lexique ORDER BY mot');
+
+        if (isset($_GET['def']) and !empty($_GET['def'])) {
+            $def = htmlspecialchars($_GET['def']);
+            $lexique = $bdd->query('SELECT * from lexique WHERE mot LIKE "%' . $def . '%" ORDER BY mot');
+        }
+        ?>
         <p class="titrepage">Lexique</p>
 
         <div class="caseblanche">
-            <p class="corpstexte">Ce dictionnaire regroupe des termes utilisés dans le milieu féministe afin d'éclairer les néophytes sur les usages actuels de certains mots. Ce lexique n'a pas vocation à produire des définitions linguistiques, mais part d'une volonté d'améliorer l'accessibilité. Il est bien entendu que toutes ces explications sont par essence flottantes et en aucun cas figées et fermées.</p>
-            <center>barre de recherche</center>
-            <hr />
+            <p class="corpstexte">Ce dictionnaire regroupe des termes utilisés dans le milieu féministe afin d'éclairer les néophytes sur les usages actuels de certains mots. Ce lexique n'a pas vocation à produire des définitions linguistiques, mais part d'une volonté d'améliorer l'accessibilité. Il est bien entendu que toutes ces explications sont par essence flottantes et en aucun cas figées et fermées.<br /></p>
+
+            <form methode="GET">
+                <p class="corpstextecenter">
+                    <br />
+                    <input type="search" name="def" size="80" placeholder="Recherche d'un terme..." />
+                    <input type="submit" value="Valider" class="btnrecherche" />
+                    <input type="submit" value="Restaurer" name="restaurer" class="btnrecherche" />
+                </p>
+                <br />
+
+            </form>
+            <hr /> <br />
+
+            <?php //Gestion de l'affichage de la recherche
+            if ($lexique->rowCount() > 0) { ?>
+                <ul>
+                    <?php while ($m = $lexique->fetch()) { ?>
+                        <li>
+                            <p class="corpstexte"><u><?= $m['mot'] ?></u> : <?= $m['definition'] ?>
+                        </li>
+                        </p>
+                    <?php } ?>
+                </ul>
+            <?php } else { ?>
+                <p class="corpstexte">Aucun résultat pour "<?= $def ?>"...</p><?php } ?>
+
+            <?php //Bouton "Restaurer"
+            if (isset($_GET['restaurer']) and !empty($_GET['def'])) {
+                $lexique = $bdd->query('SELECT * from lexique ORDER BY mot');
+                while ($m = $lexique->fetch()) { ?>
+                    <li>
+                        <p class="corpstexte"><u><?= $m['mot'] ?></u> : <?= $m['definition'] ?>
+                    </li>
+                    </p>
+            <?php }
+            } ?>
         </div>
         <br />
     </section>
+
 
     <section class="footer">
         <br /><br />

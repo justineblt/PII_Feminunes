@@ -38,7 +38,8 @@ session_start();
         <br />
       </p>
       <p class="corpstextegras">
-        Personne n’a à choisir entre manger ou avoir des protections hygiéniques, c’est pourquoi des boîtes en libre-service sont à votre disposition à l’ENSC.
+        Personne n’a à choisir entre manger ou avoir des protections hygiéniques, c’est pourquoi des boîtes en libre-service sont à votre disposition à l’ENSC.<br />
+        Nous reversons les dons financiers à 3 associations qui sont : Règles Elémentaires, Féminité sans abris et le Planning Familial.
       </p><br />
       <a href="https://lydia-app.com/collect/80479-action-boite-menstruelle/fr" target="_blank">
         <img class="btncagnotte" src="img/cagnottebtn.png"></a>

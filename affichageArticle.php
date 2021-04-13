@@ -25,15 +25,29 @@
 
     <?php
     //Requête pour afficher les données de l'article de la BDD
-    $requete = $bdd->query("SELECT * FROM article WHERE ID=2");
+
+    $requete = $bdd->query("SELECT * FROM article WHERE ID=".$_GET["id"]);
     $article = $requete->fetch();
 
     //Requêtes pour naviguer d'articles en articles
-    $id = $article['ID'];
-    $requete2 = $bdd->query("SELECT nompage FROM article WHERE ID=$id+1");
-    $articlesuivant = $requete2->fetch();
-    $requete3 = $bdd->query("SELECT nompage FROM article WHERE ID=$id-1");
-    $articleprecedent = $requete3->fetch();
+    $idsuiv=$_GET["id"]+1;
+    $idprec=$_GET["id"]-1;
+
+    $requete2 = $bdd->query("SELECT MAX(ID) FROM article");
+    $maxid = $requete2->fetch();
+
+    $requete3 = $bdd->query("SELECT MIN(ID) FROM article");
+    $minid = $requete3->fetch();
+
+    if ($idprec==0)
+    {
+        $idprec=$maxid['0'];
+    }
+
+    if ($idsuiv==$maxid['0']+1)
+    {
+        $idsuiv=$minid['0'];
+    }
     ?>
 
     <p class="titrepage"><?php echo $article['theme']; ?></p>
@@ -41,9 +55,9 @@
     <div class="caseblanche">
       <table>
         <tr>
-          <td class="flecheg"> <a href=<?php echo $articleprecedent['nompage'] ?>> <img class="fleche" src="img/flechegch.png" alt="flèche"></a></td>
+          <td class="flecheg"> <a <?php echo "href=affichageArticle.php?id=".$idprec?> /> <img class="fleche" src="img/flechegch.png" alt="flèche"></a></td>
           <td class="couv"> <?php echo '<img class="entetearticle" src="img/' . $article["couverture"] . '">'; ?></td>
-          <td class="fleched"><a href=<?php echo $articlesuivant['nompage'] ?>><img class="fleche" src="img/flechedrt.png" alt="flèche"></a></td>
+          <td class="fleched"> <a <?php echo "href=affichageArticle.php?id=".$idsuiv?> /><img class="fleche" src="img/flechedrt.png" alt="flèche"></a></td>
       </table>
 
       <p class="titrearticle"><?php echo $article['titre']; ?></p>
