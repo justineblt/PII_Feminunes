@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <?php $pagetitre = "Histoire";
+  <?php $pagetitre = "Ressource";
   require_once 'head.php';
   include('tryandcatch.php');
   ?>
