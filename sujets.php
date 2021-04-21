@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <?php $pagetitre = "Articles : Témoignages";
+  <?php $pagetitre = "Articles : Sujets d'éducation";
   require_once 'head.php';
   include('tryandcatch.php');
   ?>
